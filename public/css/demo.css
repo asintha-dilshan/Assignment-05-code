@@ -1,0 +1,681 @@
+/*  Navigation Bar */
+.bg-custom {
+    background: linear-gradient(to right, #001f3f, #003366); 
+    padding: 12px 20px;
+    border-radius: 25px; 
+    margin: 10px auto; 
+    max-width: 95%; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Profile Image */
+/* Profile Image */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer; 
+}
+
+/* Profile Popup Styling  */
+.profile-popup {
+    position: absolute;
+    top: 50px; 
+    left: 20px; 
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, visibility 0.3s;
+    transform: scale(0);
+    visibility: hidden;
+    z-index: 1000;
+}
+
+/* Enlarged Profile Image */
+.profile-popup-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Show Popup When Active */
+.profile-popup.active {
+    transform: scale(1);
+    visibility: visible;
+}
+
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/*  Navbar */
+.bg-custom {
+    background: linear-gradient(to right, #001f3f, #003366, #001f3f);
+    padding: 12px 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+/* Name Styling */
+.nav-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Buttons */
+.small-button {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(145deg, #d4d4d4, #ffffff); 
+    color: black !important;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.5); 
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover Animation */
+.small-button:hover {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3), -5px -5px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Click Effect */
+.small-button:active {
+    transform: scale(0.95);
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2), inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+}
+
+/* -----  Dropdown Button ----- */
+.dropdown-toggle {
+    background: linear-gradient(to right, #007bff, #0056b3); 
+    color: white !important;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Hover Effect */
+.dropdown-toggle:hover {
+    background: linear-gradient(to right, #0056b3, #003f7f);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background: #f8f9fa; /* Light color */
+    border-radius: 10px;
+    border: 2px solid #007bff;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    font-size: 14px;
+    font-weight: 600;
+    color: black !important;
+    padding: 10px 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Dropdown Item Hover */
+.dropdown-item:hover {
+    background: #007bff;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+/* Dropdown Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* demo Page*/
+
+/* Table 01 Styling */
+
+.animated-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header - Blue & Purple Gradient */
+.table-header {
+    background: linear-gradient(45deg, #4b0082, #0000ff);
+    color: white;
+    font-size: 18px;
+}
+
+/* Table Rows */
+.animated-table tr {
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-table tr:hover {
+    background-color: #d1c4e9;
+    transform: scale(1.02);
+}
+
+/* Table Cells */
+.animated-table td {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+
+/* View PDF Button */
+.view-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background: #6a0dad; 
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-btn:hover {
+    background: #4b0082;
+    transform: scale(1.1);
+}
+
+/* Bold Black Highlight for Topic Title */
+.text-highlight {
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Highlighted and Animated Title */
+.text-highlight {
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Animated Glowing Effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #007bff, 0 0 15px #6a0dad;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #007bff, 0 0 25px #6a0dad;
+    }
+}
+
+/* Description Styling with Animation */
+.text-highlight-sub {
+    font-size: 22px; 
+    font-weight: bold; 
+    color: #ffffff !important; 
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3a0ca3, #4361ee) !important; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    display: inline-block;
+    width: fit-content;
+    max-width: 90%;
+    opacity: 1;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/*Table 02 Styling */
+.animated-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header - Blue & Purple Gradient */
+.table-header {
+    background: linear-gradient(45deg, #4b0082, #0000ff);
+    color: white;
+    font-size: 18px;
+}
+
+/* Table Rows */
+.animated-table tr {
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-table tr:hover {
+    background-color: #d1c4e9;
+    transform: scale(1.02);
+}
+
+/* Table Cells */
+.animated-table td {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+/* Bold Black Highlight for Title */
+.text-highlight {
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #007bff, 0 0 15px #6a0dad;
+    }
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #007bff, 0 0 25px #6a0dad;
+    }
+}
+
+/* Description Styling */
+.text-highlight-sub {
+    background: linear-gradient(90deg, #6a0dad, #4b0082, #0000ff);
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container for Two-Column Lists */
+.list-container-left,
+.education-container,
+.styled-list-left {
+    text-align: left;
+    max-width: 80%;
+}
+
+/* Two-Column Special Modules List */
+.list-container-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* Styled List */
+.styled-list,
+.styled-list-left {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Aligns extracurricular activities properly */
+.styled-list-left li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    width: 100%;
+}
+
+/* Ensures text in extracurriculars is left-aligned */
+.activity-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Bullet Point Styling */
+.styled-list li::before,
+.styled-list-left li::before {
+    content: "🔹"; 
+    color: #4b0082;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Education Entries */
+.education-entry {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80%;
+
+}
+
+/* Education Logo */
+.edu-logo {
+    width: 30px; 
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/* Year Styling */
+.year {
+    font-weight: bold;
+    color: #6a0dad;
+    font-style: italic;
+    font-size: 18px;
+    padding: 5px 8px;
+    border-radius: 8px;
+    background: rgba(106, 13, 173, 0.1);
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Smooth Fade-in Animation for Years */
+.animated-year {
+    animation: fadeIn 1.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Highlighted Section Titles */
+.text-highlight {
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Image Section Styling */
+.image-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.image-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure Images Are the Same Size */
+.fixed-size-image {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.fixed-size-image:hover {
+    transform: scale(1.1);
+}
+
+/* Image Caption Styling */
+.image-caption {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4b0082;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Audio and Video Section Styling */
+.audio-container, .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Custom Audio Player */
+.custom-audio {
+    width: 60%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Custom Video Player */
+.custom-video {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.custom-audio:hover, .custom-video:hover {
+    transform: scale(1.05);
+}
+
+/* Captions */
+.audio-caption, .video-caption {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4b0082;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Professional Referees Container */
+.referees-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Individual Referee Card */
+.referee-card {
+    background: linear-gradient(135deg, #232526, #414345); /* Dark gray gradient */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 48%;
+    color: white; /* Ensure text is visible */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.referee-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Referee Name */
+.referee-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffcc00; 
+    margin-bottom: 10px;
+}
+
+/* Highlighted Text */
+.highlight-text {
+    color: #ffdd44;
+}
+
+/* Email Link */
+.email-link {
+    text-decoration: none;
+    color: #4b9cd3;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    color: #82cfff;
+    text-decoration: underline;
+}
+
+/* Contact Number */
+.contact-number {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Animation for Section */
+.referees-container {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in effect to the entire body */
+body {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+/* Keyframe animation for fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

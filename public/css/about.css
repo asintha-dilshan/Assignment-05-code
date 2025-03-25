@@ -1,0 +1,604 @@
+/*  Navigation Bar */
+.bg-custom {
+  background: linear-gradient(to right, #001f3f, #003366);
+  padding: 12px 20px;
+  border-radius: 25px;
+  margin: 10px auto;
+  max-width: 95%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navbar Profile Image */
+/* Profile Image */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Profile Popup Styling  */
+.profile-popup {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, visibility 0.3s;
+  transform: scale(0);
+  visibility: hidden;
+  z-index: 1000;
+}
+
+/* Enlarged Profile Image */
+.profile-popup-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Show Popup When Active */
+.profile-popup.active {
+  transform: scale(1);
+  visibility: visible;
+}
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+/*  Navbar */
+.bg-custom {
+  background: linear-gradient(to right, #001f3f, #003366, #001f3f);
+  padding: 12px 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Image */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Name Styling */
+.nav-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white !important;
+}
+
+/* Buttons */
+.small-button {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(145deg, #d4d4d4, #ffffff);
+  color: black !important;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2),
+    -3px -3px 6px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hover Animation */
+.small-button:hover {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  transform: scale(1.05);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3),
+    -5px -5px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Click Effect */
+.small-button:active {
+  transform: scale(0.95);
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+}
+
+/* -----  Dropdown Button ----- */
+.dropdown-toggle {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white !important;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Hover Effect */
+.dropdown-toggle:hover {
+  background: linear-gradient(to right, #0056b3, #003f7f);
+  transform: scale(1.05);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background: #f8f9fa; /* Light color */
+  border-radius: 10px;
+  border: 2px solid #007bff;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: black !important;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Dropdown Item Hover */
+.dropdown-item:hover {
+  background: #007bff;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+/* Dropdown Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ABOUT Page*/
+
+/* About Us Box (Under Navbar) */
+.about-box {
+  background: linear-gradient(to right, #ffffff, #f8f9fa);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* About Us Heading */
+.about-box h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* 3D Name Styling */
+.text-3d {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 3D Hover Effect */
+.text-3d:hover {
+  transform: scale(1.05);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Social Media Icons */
+.social-icon {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Tooltip Styling */
+.social-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show Tooltip on Hover */
+.social-icon:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Social Icon Hover Effect */
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* About & Contact Bar */
+.about-contact-bar {
+  background: linear-gradient(to right, #ffffff, #f8f9fa);
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* About Us & Contact Headings */
+.about-box h3,
+.contact-box h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0056b3;
+  margin: 0;
+}
+
+/* Contact Box */
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  width: 100%;
+}
+
+/* Contact Details ) */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contact Links */
+.contact-link,
+.contact-address {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Contact Icons */
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Profile Summary Box */
+.profile-summary {
+  text-align: justify;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  line-height: 1.6;
+}
+
+/* Styling for Key Emphasis */
+.profile-summary p strong {
+  color: #0056b3;
+}
+
+/* Horizontal Line Styling */
+.profile-summary hr {
+  border: none;
+  border-top: 3px solid black;
+  margin: 15px 0;
+}
+
+/* Qualifications Container */
+.qualifications-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Align "HIGHLIGHTS OF QUALIFICATIONS" to the Left */
+.qualifications-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2f4f80;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Skills Subheading (Competency Skills & Other Skills) */
+.skills-subheading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+/* Ensure Lists Do Not Align with Subheadings */
+.skills-list-container {
+  margin-top: -5px;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Align Icons and Text */
+.skills-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Icon Styling */
+.skills-list li i {
+  font-size: 1.2rem;
+  color: #0056b3;
+  margin-right: 10px;
+}
+
+/* Education Section */
+.education-entry-custom {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Section Heading */
+.education-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2f4f80;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Make the education years bold */
+.education-year {
+  font-weight: bold;
+  font-size: 1.1rem; /* Adjust size if needed */
+  color: #333; /* Ensures readability */
+}
+
+/* Top Divider Line */
+.section-divider {
+  border: none;
+  border-top: 2px solid black;
+  margin-bottom: 15px;
+}
+
+/* Education Item (Flexbox for Proper Alignment) */
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Education Details */
+.education-details {
+  flex-grow: 1;
+}
+
+/* Degree Styling */
+.degree {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+/* Institution Styling */
+.institution {
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* University Icons */
+.edu-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+
+/* Professional Experience Section */
+.experience-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Section Heading */
+.experience-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2f4f80;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Top Divider Line */
+.section-divider {
+  border: none;
+  border-top: 2px solid black;
+  margin-bottom: 15px;
+}
+
+/* Experience Item */
+.experience-item {
+  margin-bottom: 20px;
+}
+
+/* Job Title and Year Alignment */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Job Title Styling */
+.job-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+/* Experience Year  */
+.experience-year {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+  min-width: 120px;
+  text-align: right;
+}
+
+/* Company Name with Logo */
+.company {
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Company Logo Styling */
+.company-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Experience List */
+.experience-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Notable Achievements Section */
+.achievements-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Section Heading */
+.achievements-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2f4f80;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Top Divider Line */
+.section-divider {
+  border: none;
+  border-top: 2px solid black;
+  margin-bottom: 15px;
+}
+
+/* Achievement Item */
+.achievement-item {
+  margin-bottom: 20px;
+}
+
+/* Title and Year Alignment */
+.achievement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Achievement Title Styling */
+.achievement-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+/* Achievement Year (Now Aligned with Title) */
+.achievement-year {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Achievement Description */
+.achievement-description {
+  font-size: 1rem;
+  color: #333;
+  margin-left: 15px;
+}
+
+/* Apply fade-in effect to the entire body */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+/* Keyframe animation for fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
