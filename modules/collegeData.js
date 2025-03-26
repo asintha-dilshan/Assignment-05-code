@@ -159,7 +159,7 @@ module.exports.addStudent = function (studentData) {
     // Append new student to in-memory collection
     dataCollection.students.push(orderedStudent);
 
-    // ✅ Correct file path: Moves up one level from modules/ to project root, then into data/
+    // Correct file path: Moves up one level from modules/ to project root, then into data/
     const filePath = path.join(__dirname, "../data/students.json");
 
     // Write updated students array to the file

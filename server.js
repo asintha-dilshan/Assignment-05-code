@@ -1,12 +1,12 @@
 /*********************************************************************************
- *  WEB700 – Assignment 03
+ *  WEB700 – Assignment 05
  *  I declare that this assignment is my own work in accordance with Seneca Academic Policy.
  *  No part of this assignment has been copied manually or electronically from any other source
  *  (including 3rd party web sites) or distributed to other students.
  *
  *  Name: Asintha Dilshan Jayasekara Wisurumana Arachchige
  *  Student ID: 170388235
- *  Date: 02/16/2025
+ *  Date: 03/25/2025
  ********************************************************************************/
 
 const express = require("express");
@@ -38,9 +38,9 @@ const navLink = (url, options) =>
   helpers.navLink(app.locals.activeRoute, url, options);
 
 // Route to Serve addStudent.html
-app.get("/students/add", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "addStudent.html"));
-});
+// app.get("/students/add", (req, res) => {
+//   res.sendFile(path.join(__dirname, "views", "addStudent.html"));
+// });
 
 // Home Page Route
 app.get("/home", (req, res) => {
@@ -62,6 +62,22 @@ app.get("/htmlDemo", (req, res) => {
   res.render("htmlDemo", { navLink: navLink });
 });
 
+// Route for Add Student
+app.get("/addStudents", (req, res) => {
+  res.render("addStudents", { navLink: navLink });
+});
+
+// POST /students/add
+app.post("/addStudents", (req, res) => {
+  collegeData
+    .addStudent(req.body)
+    .then(() => {
+      res.redirect("/students"); // Or res.render("student-added", { navLink: navLink });
+    })
+    .catch((err) => {
+      res.status(500).render("error", { message: "Error adding student: " + err, navLink: navLink });
+    });
+});
 // Get all students or by course
 app.get("/students", (req, res) => {
   if (req.query.course) {
@@ -137,28 +153,28 @@ app.get("/course/:id", (req, res) => {
 });
 
 // Route to Handle Form Submission
-app.post("/students/add", (req, res) => {
-  collegeData
-    .addStudent(req.body)
-    .then(() => {
-      res.send(`
-                <html>
-                <head>
-                    <title>Student Added</title>
-                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-                </head>
-                <body class="d-flex justify-content-center align-items-center vh-100">
-                    <div class="text-center">
-                        <h2 class="mb-4">Student Added Successfully!</h2>
-                        <a href="/home" class="btn btn-primary">Go Back to Home</a>
-                        <a href="/students" class="btn btn-success">View All Students</a>
-                    </div>
-                </body>
-                </html>
-            `);
-    })
-    .catch((err) => res.status(500).send(err));
-});
+// app.post("/students/add", (req, res) => {
+//   collegeData
+//     .addStudent(req.body)
+//     .then(() => {
+//       res.send(`
+//                 <html>
+//                 <head>
+//                     <title>Student Added</title>
+//                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+//                 </head>
+//                 <body class="d-flex justify-content-center align-items-center vh-100">
+//                     <div class="text-center">
+//                         <h2 class="mb-4">Student Added Successfully!</h2>
+//                         <a href="/home" class="btn btn-primary">Go Back to Home</a>
+//                         <a href="/students" class="btn btn-success">View All Students</a>
+//                     </div>
+//                 </body>
+//                 </html>
+//             `);
+//     })
+//     .catch((err) => res.status(500).send(err));
+// });
 
 // Handle 404 Errors
 app.use((req, res) => {
